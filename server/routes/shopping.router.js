@@ -22,9 +22,9 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   console.log("POST req.body", req.body);
   let queryText =
-    'INSERT INTO "shopping" ("Name", "Quantity") VALUES ($1, $2);';
+    'INSERT INTO "shopping" ("name", "quantity") VALUES ($1, $2);';
   pool
-    .query(queryText, [req.body.name, req.body.role])
+    .query(queryText, [req.body.name, req.body.quantity])
     .then((result) => {
       res.sendStatus(200);
     })
