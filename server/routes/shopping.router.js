@@ -22,3 +22,6 @@ router.get('/', (req, res) =>{
 
 
 // DELETE
+
+
+module.exports = router;
