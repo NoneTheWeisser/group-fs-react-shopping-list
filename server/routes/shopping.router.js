@@ -35,5 +35,16 @@ router.post("/", (req, res) => {
 });
 
 // DELETE
+router.delete("/:id", (req, res) => {
+  const queryText = "DELETE FROM shopping WHERE id = $1";
+
+  pool
+    .query(queryText, [req.params.id])
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
+      console.error("Could not delete shopping", err);
+      res.sendStatus(500);
+    });
+});
 
 module.exports = router;
