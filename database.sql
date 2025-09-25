@@ -23,3 +23,6 @@ VALUES
     ('Product B', 22.75),
     ('Product C', 5.00),
     ('Product D', 100.25);
+
+
+ALTER TABLE shopping ADD COLUMN purchased BOOLEAN DEFAULT false;

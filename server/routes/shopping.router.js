@@ -7,7 +7,6 @@ const router = express.Router();
 router.get("/", (req, res) => {
   const sqlText = `SELECT * FROM "shopping" ORDER BY name ASC;`;
 
-
   pool
     .query(sqlText)
     .then((result) => {
@@ -61,5 +60,28 @@ router.delete("/:id", (req, res) => {
 });
 
 
+// PUT
+router.put("/:id", (req, res) => {
+  const { id } = req.params;
+  const { purchased } = req.body;
+
+  console.log("Updating item:", id, "to purchased =", purchased);
+  console.log("req.body is:", req.body);
+
+
+  const queryText = `
+    UPDATE shopping
+    SET purchased = $1
+    WHERE id = $2;
+  `;
+
+  pool
+    .query(queryText, [purchased || false, id])
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
+      console.error("Error updating purchased status", err);
+      res.sendStatus(500);
+    });
+});
 
 module.exports = router;
