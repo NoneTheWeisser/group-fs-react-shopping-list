@@ -14,8 +14,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 ### Render Shopping List
 [x] Render List
 [ ] Add buttons - PLACE HOLDERS are in place
-    [ ] Remove 
+    [x] Remove 
     [ ] Buy
+        [ ] Purchased - Once buy is clicked swap to purchased using 
+            buyListItem(or something like that) and conditional rendering
 
 ### Create Form
 [x] addShoppingItem
@@ -31,6 +33,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] - Name - text, allow up to 80 characters (required)
     [x] Quantity - allow for decimal numbers (required)
 [x] When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display. 
-    [ ] Each item should also have an option to remove it from the list or mark it as purchased. Once purchased, the buttons should be hidden and the item should show as "Purchased".    
+    [ ] Each item should also have an option to remove it from the list or mark it as purchased. 
+        Once purchased, the buttons should be hidden and the item should show as "Purchased".    
 [x] Items should initially appear alphabetically, but as items are marked purchased they should sort to the end of the list.
-[ ] The `Reset` button should clear the purchased status from all items, allowing the list to be re-used. The `Clear` button should remove all items from the list, deleting them from the database.
+[ ] The `Reset` button should clear the purchased status from all items, allowing the list to be re-used. 
+    The `Clear` button should remove all items from the list, deleting them from the database.
