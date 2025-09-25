@@ -35,7 +35,7 @@ function App() {
       <Header />
       <ShoppingForm getShoppingList={getShoppingList} />
 
-      {shoppingList && <ShoppingList shoppingList={shoppingList} />}
+      {shoppingList && <ShoppingList shoppingList={shoppingList} getShoppingList={getShoppingList} />}
     </div>
   );
 }
