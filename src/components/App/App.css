@@ -2,3 +2,9 @@ main {
   width: 90%;
   margin: auto;
 }
+
+/* Do we want to make it a container? */
+.container {
+  max-width: 800px;
+  margin-top: 40px;
+}
