@@ -15,8 +15,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] Render List
 [ ] Add buttons - PLACE HOLDERS are in place
     [x] Remove 
-    [ ] Buy
-        [ ] Purchased - Once buy is clicked swap to purchased using 
+    [x] Buy
+        [x] Purchased - Once buy is clicked swap to purchased using 
             buyListItem(or something like that) and conditional rendering
 
 ### Create Form
@@ -36,5 +36,5 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [ ] Each item should also have an option to remove it from the list or mark it as purchased. 
         Once purchased, the buttons should be hidden and the item should show as "Purchased".    
 [x] Items should initially appear alphabetically, but as items are marked purchased they should sort to the end of the list.
-[ ] The `Reset` button should clear the purchased status from all items, allowing the list to be re-used. 
-    The `Clear` button should remove all items from the list, deleting them from the database.
+[x] The `Reset` button should clear the purchased status from all items, allowing the list to be re-used. 
+[ ] The `Clear` button should remove all items from the list, deleting them from the database.

@@ -61,6 +61,19 @@ router.delete("/:id", (req, res) => {
 
 
 // PUT
+router.put('/reset', (req, res) => {
+  const queryText = 'UPDATE shopping SET purchased = false;';
+
+  pool
+    .query(queryText)
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
+      console.error('Error resetting purchased items', err);
+      res.sendStatus(500);
+    });
+});
+
+
 router.put("/:id", (req, res) => {
   const { id } = req.params;
   const { purchased } = req.body;
@@ -83,5 +96,7 @@ router.put("/:id", (req, res) => {
       res.sendStatus(500);
     });
 });
+
+
 
 module.exports = router;
