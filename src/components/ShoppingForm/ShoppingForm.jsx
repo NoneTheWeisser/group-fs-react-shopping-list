@@ -36,7 +36,7 @@ export default function ShoppingForm({ getShoppingList }) {
   return (
     <div className="container py-4">
       <div className="card p-4 shadow-sm">
-        <h2 className="text-center mb-4 text-primary">Add an Item:</h2>
+        <h4 className="text-left mb-4 text-secondary">Add an Item:</h4>
         <form onSubmit={handleSubmit} className="d-flex gap-2">
           <input
             type="text"
