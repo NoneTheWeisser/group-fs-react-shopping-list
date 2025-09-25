@@ -14,6 +14,7 @@ const ShoppingList = ({ shoppingList, getShoppingList, clearShoppingList }) => {
   };
   return (
     <div className="container py-4">
+      <div className="card p-4 shadow-sm">
       <h2 className="text-center mb-4 text-primary fw-bold">Shopping List</h2>
       <table className="table table-striped table-bordered">
         <thead className="table-dark">
@@ -34,10 +35,11 @@ const ShoppingList = ({ shoppingList, getShoppingList, clearShoppingList }) => {
         </tbody>
       </table>
       <div className="text-center mb-4">
-        <button className="btn btn-danger mb-3" onClick={clearShoppingList}>
+        <button id="table-btn" className="btn btn-danger clear-btn mb-3" onClick={clearShoppingList}>
           CLEAR ALL
         </button>
-      <button className="btn btn-warning mb-3" onClick={resetPurchases}>Reset</button>
+      <button id="table-btn" className="btn btn-warning mb-3" onClick={resetPurchases}>Reset</button>
+      </div>
       </div>
     </div>
   );
