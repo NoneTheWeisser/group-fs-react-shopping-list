@@ -29,14 +29,35 @@ function App() {
         console.log(err);
       });
   };
+  const clearShoppingList = () => {
+  axios
+    .delete('/api/shopping/clear')
+    .then(() => {
+      setShoppingList([]); 
+    })
+    .catch((err) => {
+      alert('Error clearing shopping list');
+      console.log(err);
+    });
+};
 
   return (
     <div className="App">
       <Header />
       <ShoppingForm getShoppingList={getShoppingList} />
 
-      {shoppingList && <ShoppingList shoppingList={shoppingList} getShoppingList={getShoppingList} />}
+      {shoppingList.length > 0 ? (
+  <ShoppingList
+    shoppingList={shoppingList}
+    getShoppingList={getShoppingList}
+    clearShoppingList={clearShoppingList}
+  />
+) : (
+  <p className="text-center text-muted mt-4">Your shopping list is empty.</p>
+)}
+   
     </div>
+   
   );
 }
 

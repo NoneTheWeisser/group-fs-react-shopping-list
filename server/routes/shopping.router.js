@@ -34,6 +34,17 @@ router.post("/", (req, res) => {
       res.sendStatus(500);
     });
 });
+//Route for clesaring the data
+router.delete('/clear', (req, res) => {
+  const query = `DELETE FROM "shopping";`;
+
+  pool.query(query)
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
+      console.error('Error deleting all items:', err);
+      res.sendStatus(500);
+    });
+});
 
 // DELETE
 router.delete("/:id", (req, res) => {
@@ -47,6 +58,7 @@ router.delete("/:id", (req, res) => {
       res.sendStatus(500);
     });
 });
+
 
 // PUT
 router.put("/:id", (req, res) => {

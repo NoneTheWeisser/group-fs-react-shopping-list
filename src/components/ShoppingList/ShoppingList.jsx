@@ -1,8 +1,8 @@
 import React from "react";
 import ListItem from "./ListItem";
-import './ShoppingList.css';
+import "./ShoppingList.css";
 
-const ShoppingList = ({ shoppingList, getShoppingList }) => {
+const ShoppingList = ({ shoppingList, getShoppingList, clearShoppingList }) => {
   return (
     <div className="container py-4">
       <h2 className="text-center mb-4 text-primary fw-bold">Shopping List</h2>
@@ -16,10 +16,19 @@ const ShoppingList = ({ shoppingList, getShoppingList }) => {
         </thead>
         <tbody>
           {shoppingList.map((item) => (
-            <ListItem key={item.id} item={item} getShoppingList={getShoppingList} />
+            <ListItem
+              key={item.id}
+              item={item}
+              getShoppingList={getShoppingList}
+            />
           ))}
         </tbody>
       </table>
+      <div className="text-center mb-4">
+        <button className="btn btn-danger" onClick={clearShoppingList}>
+          CLEAR ALL
+        </button>
+      </div>
     </div>
   );
 };
