@@ -2,6 +2,10 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "../Header/Header.jsx";
+import ShoppingList from "../ShoppingList/ShoppingList.jsx";
+
+
+
 import "./App.css";
 
 function App() {
@@ -19,7 +23,7 @@ function App() {
     axios
       .get("/api/shopping")
       .then((response) => {
-        setGuestList(response.data);
+        setShoppingList(response.data);
       })
       .catch((err) => {
         alert("Error getting shopping list");
@@ -30,7 +34,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <main>
+          <ShoppingList shoppingList={shoppingList} />
         <p>Under Construction...</p>
       </main>
     </div>
