@@ -25,7 +25,7 @@ const ListItem = ({ item, getShoppingList }) => {
       <td>{quantity}</td>
       <td>
         {purchased ? (
-          <span className="text-success fw-bold">Purchased</span>
+          <span className="text-success fw-bold">Purchased</span> //do we change color?
         ) : (
           <>
             <button
