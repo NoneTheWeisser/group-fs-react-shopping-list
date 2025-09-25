@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "../Header/Header.jsx";
 import ShoppingList from "../ShoppingList/ShoppingList.jsx";
+import ShoppingForm from "../ShoppingForm/ShoppingForm.jsx";
 
 import "./App.css";
 
@@ -32,23 +33,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ShoppingForm getShoppingList={getShoppingList} />
 
-    
-        {shoppingList && <ShoppingList shoppingList={shoppingList} />}
-        <p>Under Construction...</p>
-    
-      {/* Shopping Form */}
-
-      <h2>Add an Item</h2>
-      <form>
-        <label>Item: </label>
-        <input></input>
-        <label>Quantity: </label>
-        <input></input>
-        <button>Save</button>
-      </form>
-
-      {/* Shopping List */}
+      {shoppingList && <ShoppingList shoppingList={shoppingList} />}
     </div>
   );
 }
