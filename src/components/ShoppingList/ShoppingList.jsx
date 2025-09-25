@@ -11,8 +11,7 @@ const ShoppingList = ({ shoppingList, getShoppingList }) => {
           <tr>
             <th>Name</th>
             <th>Quantity</th>
-            <th>Buy</th>
-            <th>Remove</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
