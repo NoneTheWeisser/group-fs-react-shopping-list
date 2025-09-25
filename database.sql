@@ -14,3 +14,12 @@ VALUES
     ('Product B', 22.75),
     ('Product C', 5.00),
     ('Product D', 100.25);
+
+DELETE FROM shopping;
+
+INSERT INTO shopping (name, quantity)
+VALUES
+    ('Product A', 15.50),
+    ('Product B', 22.75),
+    ('Product C', 5.00),
+    ('Product D', 100.25);
