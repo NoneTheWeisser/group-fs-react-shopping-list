@@ -1,14 +1,22 @@
 import React from "react";
 
 const ListItem = ({ item }) => {
+  const { name, quantity } = item;
+
   return (
-    <div className="card shadow-sm border-0 mb-3">
-      <div className="card-body d-flex justify-content-between align-items-center">
-        <h5 className="fw-semibold text-primary mb-0">{item.name}</h5>
-        <span className="badge bg-secondary px-3 py-2 fs-6">Qty: {item.quantity}</span>
-      </div>
-    </div>
+    <tr>
+      <td>{name}</td>
+    
+      <td>{quantity}</td>
+      <td>
+        <button className="btn btn-success btn-sm">Buy</button>
+      </td>
+      <td>
+        <button className="btn btn-danger btn-sm">Remove</button>
+      </td>
+    </tr>
   );
 };
 
 export default ListItem;
+
