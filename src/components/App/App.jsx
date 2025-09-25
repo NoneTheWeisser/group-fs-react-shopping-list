@@ -2,6 +2,10 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "../Header/Header.jsx";
+import ShoppingList from "../ShoppingList/ShoppingList.jsx";
+
+
+
 import "./App.css";
 
 function App() {
@@ -30,6 +34,13 @@ function App() {
   return (
     <div className="App">
       <Header />
+
+
+      <main>
+          <ShoppingList shoppingList={shoppingList} />
+        <p>Under Construction...</p>
+      </main>
+
       <h2>Add an Item</h2>
       <form>
         <label>Item: </label>
@@ -64,6 +75,7 @@ function App() {
             ))}
           </tbody>
         </table>
+
     </div>
   );
 }

@@ -3,8 +3,10 @@ const pool = require("../modules/pool");
 const router = express.Router();
 
 // GET
+
 router.get("/", (req, res) => {
   const sqlText = `SELECT * FROM "shopping" ORDER BY name ASC;`;
+
 
   pool
     .query(sqlText)
