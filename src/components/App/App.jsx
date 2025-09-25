@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import Header from "../Header/Header.jsx";
 import ShoppingList from "../ShoppingList/ShoppingList.jsx";
 
-
-
 import "./App.css";
 
 function App() {
@@ -35,11 +33,11 @@ function App() {
     <div className="App">
       <Header />
 
-
-      <main>
-          <ShoppingList shoppingList={shoppingList} />
+    
+        {shoppingList && <ShoppingList shoppingList={shoppingList} />}
         <p>Under Construction...</p>
-      </main>
+    
+      {/* Shopping Form */}
 
       <h2>Add an Item</h2>
       <form>
@@ -49,33 +47,8 @@ function App() {
         <input></input>
         <button>Save</button>
       </form>
-      {/* Shopping Form */}
-     
-      {/* Shopping List */}
-        <h2>Shopping List</h2>
-        <div>
-            <button>Reset</button>
-            <button>Clear</button>
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {shoppingList.map((item) => (
-              <tr key={item.id}>
-                <td>{item.name}</td>
-                <td>{item.quantity}</td>
-                <td><button>Buy</button></td>
-                <td><button>Remove</button></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
 
+      {/* Shopping List */}
     </div>
   );
 }
